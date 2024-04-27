@@ -1,3 +1,5 @@
+import IResponse from "./interfaces/IResponse";
+
 class Ravenswift {
   private serverUrl: string;
   private projectRef: string;
@@ -7,6 +9,22 @@ class Ravenswift {
     this.serverUrl = serverUrl;
     this.projectRef = projectRef;
     this.projectKey = projectKey;
+  }
+
+  public async addSubscriber(nickName: string, email: string): Promise<Response> {
+    console.log('serverUrl', this.serverUrl);
+    console.log('projectRef', this.projectRef);
+    console.log('projectKey', this.projectKey);
+    const response = await fetch(`${this.serverUrl}/projects/${this.projectRef}/subscribers`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': this.projectKey
+      },
+      body: JSON.stringify({ nickname: nickName, email: email })
+    });
+    const data = await response.json();
+    return data;
   }
 
   public getServerUrl(): string {
