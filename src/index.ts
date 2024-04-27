@@ -11,7 +11,7 @@ class Ravenswift {
     this.projectKey = projectKey;
   }
 
-  public async addSubscriber(nickName: string, email: string): Promise<Response> {
+  public async addSubscriber(nickName: string, email: string): Promise<IResponse> {
     console.log('serverUrl', this.serverUrl);
     console.log('projectRef', this.projectRef);
     console.log('projectKey', this.projectKey);

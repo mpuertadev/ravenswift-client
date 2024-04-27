@@ -1,16 +1,17 @@
 {
   "name": "ravenswift",
   "version": "0.0.1",
-  "description": "",
+  "description": "RavenSwift is a client for the Raveswift mailing API",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Miguel Puerta <miguel@mpuerta.dev>",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.7",
     "typescript": "^5.4.5"
-  }
+  },
+  "repository": "git@github.com:mpuertadev/ravenswift-client.git"
 }
